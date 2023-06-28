@@ -61,6 +61,8 @@ RUN mkdir -p /rally/.rally && \
 
 USER 1000
 
+RUN git clone https://github.com/tatris-io/rally-tracks.git /rally/.rally/benchmarks/tracks/tatris
+
 ENV PATH=/rally/venv/bin:$PATH
 
 LABEL org.label-schema.schema-version="1.0" \
