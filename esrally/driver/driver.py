@@ -720,7 +720,8 @@ class Driver:
         # ensure relative time starts when the benchmark starts.
         self.reset_relative_time()
         self.logger.info("Attaching cluster-level telemetry devices.")
-        self.telemetry.on_benchmark_start()
+        # TODO
+        # self.telemetry.on_benchmark_start()
         self.logger.info("Cluster-level telemetry devices are now attached.")
 
         allocator = Allocator(self.challenge.schedule)
@@ -791,7 +792,8 @@ class Driver:
             self.logger.debug("Postprocessing samples...")
             self.post_process_samples()
             if self.finished():
-                self.telemetry.on_benchmark_stop()
+                # TODO
+                # self.telemetry.on_benchmark_stop()
                 self.logger.info("All steps completed.")
                 # Some metrics store implementations return None because no external representation is required.
                 # pylint: disable=assignment-from-none

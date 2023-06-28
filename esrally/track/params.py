@@ -916,7 +916,8 @@ def create_default_reader(
 ):
     source = Slice(io.MmapSource, offset, num_lines)
     target = None
-    use_create = False
+    # Tatris only supports append data(bulk action=create)
+    use_create = True
     if docs.target_index:
         target = docs.target_index
     elif docs.target_data_stream:
